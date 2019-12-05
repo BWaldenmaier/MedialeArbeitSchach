@@ -6,7 +6,7 @@ public class FigurenMouseOver : MonoBehaviour
 {
 	
 	//When the mouse hovers over the GameObject, it turns to this color (red)
-    Color m_MouseOverColor = Color.red;
+    Color m_MouseOverColor = Color.gray;
 
     //This stores the GameObject’s original color
     Color m_OriginalColor;
@@ -27,7 +27,7 @@ public class FigurenMouseOver : MonoBehaviour
         // Change the color of the GameObject to red when the mouse is over GameObject
         m_Renderer.material.color = m_MouseOverColor;
         this.transform.position = new Vector3(0, 12, 0);
-		System.Threading.Thread.Sleep(150);
+		//System.Threading.Thread.Sleep(150);
     }
 
     void OnMouseExit()
@@ -35,6 +35,6 @@ public class FigurenMouseOver : MonoBehaviour
         // Reset the color of the GameObject back to normal
         m_Renderer.material.color = m_OriginalColor;
         this.transform.position = new Vector3(0, 0, 0);
-		System.Threading.Thread.Sleep(150);
+		System.Threading.Thread.Sleep(100);
     }
 }
