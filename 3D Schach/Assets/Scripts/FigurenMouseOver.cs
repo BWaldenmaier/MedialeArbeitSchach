@@ -13,6 +13,8 @@ public class FigurenMouseOver : MonoBehaviour
 
     //Get the GameObject’s mesh renderer to access the GameObject’s material and color
     MeshRenderer m_Renderer;
+
+    bool clicked = false;
 	
     void Start()
     {
@@ -24,17 +26,50 @@ public class FigurenMouseOver : MonoBehaviour
 
     void OnMouseOver()
     {
+        if (clicked == false){
         // Change the color of the GameObject to red when the mouse is over GameObject
         m_Renderer.material.color = m_MouseOverColor;
         this.transform.position = new Vector3(0, 12, 0);
 		//System.Threading.Thread.Sleep(150);
+        }
     }
 
     void OnMouseExit()
     {
-        // Reset the color of the GameObject back to normal
+        //Reset the color of the GameObject back to normal
+        if (clicked == false){
         m_Renderer.material.color = m_OriginalColor;
         this.transform.position = new Vector3(0, 0, 0);
-		System.Threading.Thread.Sleep(100);
+		System.Threading.Thread.Sleep(100);      
+        }    
     }
+
+    void Update(){
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit = new RaycastHit();      
+            Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+ 
+             if (Physics.Raycast(ray, out hit))
+             {
+                 if (hit.transform.name == this.name)
+                 {
+                    Debug.Log(this.name);
+                     Debug.Log("Click!!!");
+                    clicked = true;
+                 }
+                 else if (hit.transform.name != this.name)
+                 {
+                     Debug.Log("Click outside this Object");
+                   clicked = false;
+                 }
+             }
+             else
+             {
+                 Debug.Log("Click outside of any object");
+                clicked = false;
+             }
+        }
+    }          
 }
