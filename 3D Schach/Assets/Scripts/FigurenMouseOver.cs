@@ -29,7 +29,7 @@ public class FigurenMouseOver : MonoBehaviour
         if (clicked == false){
         // Change the color of the GameObject to red when the mouse is over GameObject
         m_Renderer.material.color = m_MouseOverColor;
-        this.transform.position = new Vector3(0, 12, 0);
+        //this.transform.position = new Vector3(0, 12, 0);
 		//System.Threading.Thread.Sleep(150);
         }
     }
@@ -57,17 +57,22 @@ public class FigurenMouseOver : MonoBehaviour
                  {
                     Debug.Log(this.name);
                      Debug.Log("Click!!!");
+                     this.transform.position = new Vector3(0, 12, 0);
                     clicked = true;
                  }
                  else if (hit.transform.name != this.name)
                  {
                      Debug.Log("Click outside this Object");
+                     m_Renderer.material.color = m_OriginalColor;
+                     this.transform.position = new Vector3(0, 0, 0);
                    clicked = false;
                  }
              }
              else
              {
                  Debug.Log("Click outside of any object");
+                 m_Renderer.material.color = m_OriginalColor;
+                 this.transform.position = new Vector3(0, 0, 0);
                 clicked = false;
              }
         }
