@@ -8,17 +8,19 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public Board board;
-    public GameObject BauerWeiss;
-    public GameObject TurmWeiss;
-    public GameObject SpringerWeiss;
-    public GameObject LaeuferWeiss;
+    public List<GameObject> BauerWeiss;
+    public List<GameObject> TurmWeiss;
+    public List<GameObject> SpringerWeiss;
+    public List<GameObject> LaeuferWeiss;
+    
     public GameObject KoeniginWeiss;
     public GameObject KoenigWeiss;
     
-    public GameObject BauerSchwarz;
-    public GameObject TurmSchwarz;
-    public GameObject SpringerSchwarz;
-    public GameObject LaeuferSchwarz;
+    public List<GameObject> BauerSchwarz;
+    public List<GameObject> TurmSchwarz;
+    public List<GameObject> SpringerSchwarz;
+    public List<GameObject> LaeuferSchwarz;
+    
     public GameObject KoeniginSchwarz;
     public GameObject KoenigSchwarz;
 
@@ -53,28 +55,113 @@ public class GameManager : MonoBehaviour
     //Figuren werden mit der AddPiece-Funktion aufs Spielfeld gestellt
     private void InitialSetup()
     {
-        AddPiece(TurmSchwarz, black, 0, 0);
-        AddPiece(TurmSchwarz, black, 7, 0);
-        AddPiece(SpringerSchwarz, black, 1, 0);
-        AddPiece(SpringerSchwarz, black, 6, 0);
-        AddPiece(LaeuferSchwarz, black, 2, 0);
-        AddPiece(LaeuferSchwarz, black, 5, 0);
         AddPiece(KoeniginSchwarz, black, 3, 0);
         AddPiece(KoenigSchwarz, black, 4, 0);
         
-        AddPiece(TurmWeiss, white, 0, 7);
-        AddPiece(TurmWeiss, white, 7, 7);
-        AddPiece(SpringerWeiss, white, 1, 7);
-        AddPiece(SpringerWeiss, white, 6, 7);
-        AddPiece(LaeuferWeiss, white, 2,7);
-        AddPiece(LaeuferWeiss, white, 5,7);
         AddPiece(KoeniginWeiss, white, 3, 7);
         AddPiece(KoenigWeiss, white, 4,7);
         
+        
+        int LaeuferWeissCount = LaeuferWeiss.Count;
+
+        if (LaeuferWeissCount == 2)
+        {
+            AddPiece(LaeuferWeiss[0], white, 2,7);
+            AddPiece(LaeuferWeiss[1], white, 5,7);
+        }
+        else
+        {
+            AddPiece(LaeuferWeiss[0], white, 2,7);
+            AddPiece(LaeuferWeiss[0], white, 5,7);
+        }
+
+        int LaeuferSchwarzCount = LaeuferSchwarz.Count;
+
+        if (LaeuferSchwarzCount == 2)
+        {
+            AddPiece(LaeuferSchwarz[0], black, 2, 0);
+            AddPiece(LaeuferSchwarz[1], black, 5, 0);
+        }
+        else
+        {
+            AddPiece(LaeuferSchwarz[0], black, 2, 0);
+            AddPiece(LaeuferSchwarz[0], black, 5, 0);
+        }
+        
+        int SpringerWeissCount = SpringerWeiss.Count;
+
+        if (SpringerWeissCount == 2)
+        {
+            AddPiece(SpringerWeiss[0], white, 1, 7);
+            AddPiece(SpringerWeiss[1], white, 6, 7);
+        }
+        else
+        {
+            AddPiece(SpringerWeiss[0], white, 1, 7);
+            AddPiece(SpringerWeiss[0], white, 6, 7);
+        }
+
+        int SpringerSchwarzCount = SpringerSchwarz.Count;
+
+        if (SpringerSchwarzCount == 2)
+        {
+            AddPiece(SpringerSchwarz[0], black, 1, 0);
+            AddPiece(SpringerSchwarz[1], black, 6, 0);
+        }
+        else
+        {
+            AddPiece(SpringerSchwarz[0], black, 1, 0);
+            AddPiece(SpringerSchwarz[0], black, 6, 0);
+        }
+        
+        int TurmWeissCount = TurmWeiss.Count;
+        
+        if (TurmWeissCount == 2)
+        {
+            AddPiece(TurmWeiss[0], white, 0, 7);
+            AddPiece(TurmWeiss[1], white, 7, 7);
+        }
+        else
+        {
+            AddPiece(TurmWeiss[0], white, 0, 7);
+            AddPiece(TurmWeiss[0], white, 7, 7);
+        }
+        
+        int TurmSchwarzCount = TurmSchwarz.Count;
+
+        if (TurmSchwarzCount == 2)
+        {
+            AddPiece(TurmSchwarz[0], black, 0, 0);
+            AddPiece(TurmSchwarz[1], black, 7, 0);
+        }
+        else
+        {
+            AddPiece(TurmSchwarz[0], black, 0, 0);
+            AddPiece(TurmSchwarz[0], black, 7, 0);
+        }
+        
+        
+        int BauerWeissCount = BauerWeiss.Count - 1;
+        int BauerWeissIterator = BauerWeissCount;
+        int BauerSchwarzCount = BauerSchwarz.Count - 1;
+        int BauerSchwarzIterator = BauerSchwarzCount;
+        
         for (int i = 0; i < 8; i++)
         {
-            AddPiece(BauerSchwarz, black, i, 1);
-            AddPiece(BauerWeiss, white, i, 6);
+            if (BauerSchwarzIterator < 0)
+            {
+                BauerSchwarzIterator = BauerSchwarzCount;
+            }
+            AddPiece(BauerSchwarz[BauerSchwarzIterator], black, i, 1);
+            BauerSchwarzIterator -= 1;
+            
+            
+            if (BauerWeissIterator < 0)
+            {
+                BauerWeissIterator = BauerWeissCount;
+            }
+            AddPiece(BauerWeiss[BauerWeissIterator], white, i, 6);
+            BauerWeissIterator -= 1;
         }
         
     }
