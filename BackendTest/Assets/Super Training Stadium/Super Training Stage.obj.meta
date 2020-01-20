@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: 967b8e01c0f12724db3c244750758c3f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: cloud_cloud_spa_cloud00.png
+    100002: flag_3_flag_3_spa_prop00.png
+    100004: sky_sky_spa_sky00.png
+    100006: stadium_stadium_spa_black.png
+    100008: stadium_stadium_spa_ground00.png
+    100010: stadium_stadium_spa_kusa01.png
+    100012: stadium_stadium_spa_kyaku.png
+    100014: stadium_stadium_spa_prop01.png
+    100016: stadium_stadium_spa_roof00.png
+    100018: stadium_stadium_spa_stadium00.png
+    100020: stadium_stadium_spa_whiteline.png
+    100022: //RootNode
+    400000: cloud_cloud_spa_cloud00.png
+    400002: flag_3_flag_3_spa_prop00.png
+    400004: sky_sky_spa_sky00.png
+    400006: stadium_stadium_spa_black.png
+    400008: stadium_stadium_spa_ground00.png
+    400010: stadium_stadium_spa_kusa01.png
+    400012: stadium_stadium_spa_kyaku.png
+    400014: stadium_stadium_spa_prop01.png
+    400016: stadium_stadium_spa_roof00.png
+    400018: stadium_stadium_spa_stadium00.png
+    400020: stadium_stadium_spa_whiteline.png
+    400022: //RootNode
+    2100000: cloud_cloud_spa_cloud00.pngMat
+    2100002: flag_3_flag_3_spa_prop00.pngMat
+    2100004: sky_sky_spa_sky00.pngMat
+    2100006: stadium_stadium_spa_black.pngMat
+    2100008: stadium_stadium_spa_ground00.pngMat
+    2100010: stadium_stadium_spa_kusa01.pngMat
+    2100012: stadium_stadium_spa_kyaku.pngMat
+    2100014: stadium_stadium_spa_prop01.pngMat
+    2100016: stadium_stadium_spa_roof00.pngMat
+    2100018: stadium_stadium_spa_stadium00.pngMat
+    2100020: stadium_stadium_spa_whiteline.pngMat
+    2300000: cloud_cloud_spa_cloud00.png
+    2300002: flag_3_flag_3_spa_prop00.png
+    2300004: sky_sky_spa_sky00.png
+    2300006: stadium_stadium_spa_black.png
+    2300008: stadium_stadium_spa_ground00.png
+    2300010: stadium_stadium_spa_kusa01.png
+    2300012: stadium_stadium_spa_kyaku.png
+    2300014: stadium_stadium_spa_prop01.png
+    2300016: stadium_stadium_spa_roof00.png
+    2300018: stadium_stadium_spa_stadium00.png
+    2300020: stadium_stadium_spa_whiteline.png
+    3300000: cloud_cloud_spa_cloud00.png
+    3300002: flag_3_flag_3_spa_prop00.png
+    3300004: sky_sky_spa_sky00.png
+    3300006: stadium_stadium_spa_black.png
+    3300008: stadium_stadium_spa_ground00.png
+    3300010: stadium_stadium_spa_kusa01.png
+    3300012: stadium_stadium_spa_kyaku.png
+    3300014: stadium_stadium_spa_prop01.png
+    3300016: stadium_stadium_spa_roof00.png
+    3300018: stadium_stadium_spa_stadium00.png
+    3300020: stadium_stadium_spa_whiteline.png
+    4300000: cloud_cloud_spa_cloud00.png
+    4300002: flag_3_flag_3_spa_prop00.png
+    4300004: sky_sky_spa_sky00.png
+    4300006: stadium_stadium_spa_black.png
+    4300008: stadium_stadium_spa_ground00.png
+    4300010: stadium_stadium_spa_kusa01.png
+    4300012: stadium_stadium_spa_kyaku.png
+    4300014: stadium_stadium_spa_prop01.png
+    4300016: stadium_stadium_spa_roof00.png
+    4300018: stadium_stadium_spa_stadium00.png
+    4300020: stadium_stadium_spa_whiteline.png
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cloud_cloud_spa_cloud00.pngMat
+    second: {fileID: 2100000, guid: 21d6123289419eb4d92294983956a325, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flag_3_flag_3_spa_prop00.pngMat
+    second: {fileID: 2100000, guid: ff797977623288648a2f210354e59049, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sky_sky_spa_sky00.pngMat
+    second: {fileID: 2100000, guid: a1bac3c5c0e39514facaf1e034cb2430, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_stadium_spa_black.pngMat
+    second: {fileID: 2100000, guid: c3704d2c57549494a9f489f9ddd9ba3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_stadium_spa_ground00.pngMat
+    second: {fileID: 2100000, guid: 745537540c4c0b14c9c7bf34c9de1f0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_stadium_spa_kusa01.pngMat
+    second: {fileID: 2100000, guid: e8177597f6ede3f4ba3695a2153d0cb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_stadium_spa_kyaku.pngMat
+    second: {fileID: 2100000, guid: 18e2dc458a76c1846ac220e8f0f12ed3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_stadium_spa_prop01.pngMat
+    second: {fileID: 2100000, guid: 4eaba75c12f160942b0a8d4721bc8466, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_stadium_spa_roof00.pngMat
+    second: {fileID: 2100000, guid: 71d8a8b1b479a3f4ebfe01c15a204847, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_stadium_spa_stadium00.pngMat
+    second: {fileID: 2100000, guid: 73ea994b97bb85d45a910f8e5a58d338, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_stadium_spa_whiteline.pngMat
+    second: {fileID: 2100000, guid: dcb16b65ee6e4dd4392fae9c2d46e65f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
