@@ -191,9 +191,6 @@ GameObject:
   m_Component:
   - component: {fileID: 179985992}
   - component: {fileID: 179985993}
-  - component: {fileID: 179985996}
-  - component: {fileID: 179985995}
-  - component: {fileID: 179985994}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -251,52 +248,6 @@ MonoBehaviour:
   - {fileID: 196866, guid: a71fd906a2159e247ab4d632e46947db, type: 3}
   KoeniginSchwarz: {fileID: 184594, guid: 1f7a3b3d104b8e44cb39f5356ae1d0bb, type: 3}
   KoenigSchwarz: {fileID: 130826, guid: 861e95a585868b643bf2e4a1d0ae63b7, type: 3}
---- !u!114 &179985994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179985991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 066679873ef9dc941949bcf665e46f9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveLocationPrefab: {fileID: 7402951449080346784, guid: a9c479cc802b524439e61ee973dd9a23,
-    type: 3}
-  tileHighlightPrefab: {fileID: 7804154700981750580, guid: 76d0dd59e88dabf46b65ea64802edb51,
-    type: 3}
-  attackLocationPrefab: {fileID: 8119893549776706572, guid: d397787e2e576dc41a6eae38d5da7498,
-    type: 3}
---- !u!114 &179985995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179985991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f7a7dc648a5da242a9279edfbb4cea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileHighlightPrefab: {fileID: 7804154700981750580, guid: 76d0dd59e88dabf46b65ea64802edb51,
-    type: 3}
---- !u!114 &179985996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179985991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a648e285672bc024a865ff8b656027ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedMaterial: {fileID: 2100000, guid: 95208828ba39c9d47a59dba4ca3ef4cc, type: 2}
-  defaultMaterial: {fileID: 0}
 --- !u!1001 &624905807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -412,8 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a648e285672bc024a865ff8b656027ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedMaterial: {fileID: 0}
-  defaultMaterial: {fileID: 0}
+  selectedMaterial: {fileID: 2100000, guid: 95208828ba39c9d47a59dba4ca3ef4cc, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: fdf806cb46d6a40418581d1568ff1c94, type: 2}
 --- !u!4 &897847838
 Transform:
   m_ObjectHideFlags: 0
