@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public Camera cameraPlayer1;
+    public Camera cameraPlayer2;
+    public int aktiveKamera;
+    
     public Board board;
     public List<GameObject> BauerWeiss;
     public List<GameObject> TurmWeiss;
@@ -44,7 +48,7 @@ public class GameManager : MonoBehaviour
         movedBauern = new List<GameObject>();
         
         black = new Player("black",true);
-        white = new Player("red",false);
+        white = new Player("white",false);
         
         currentPlayer = black;
         otherPlayer = white;
@@ -163,7 +167,11 @@ public class GameManager : MonoBehaviour
             AddPiece(BauerWeiss[BauerWeissIterator], white, i, 6);
             BauerWeissIterator -= 1;
         }
-        
+
+        cameraPlayer1.enabled = true;
+        cameraPlayer2.enabled = false;
+        aktiveKamera = 1;
+
     }
 
     //Stellt die Figuren auf die übergebene Position und fügt sie dem Figuren-Array des jeweiligen Spielers hinzu
@@ -229,6 +237,12 @@ public class GameManager : MonoBehaviour
         Piece piece = pieceObject.GetComponent<Piece>();
         Vector2Int gridPoint = GridForPiece(pieceObject);
         List<Vector2Int> locations = piece.MoveLocations(gridPoint);
+        List<Vector2Int> opponentLocations = new List<Vector2Int>();
+
+        foreach (var opponent in otherPlayer.pieces)
+        {
+            
+        }
         
         //Locations außerhalb des Boards ausfiltern
         locations.RemoveAll(gp => gp.x < 0 || gp.x > 7 || gp.y < 0 || gp.y > 7);
@@ -287,6 +301,20 @@ public class GameManager : MonoBehaviour
     //Wechselt den Spieler der an der Reihe ist
     public void NextPlayer()
     {
+        
+        if (cameraPlayer1.enabled)
+        {
+            cameraPlayer1.enabled = false;
+            cameraPlayer2.enabled = true;
+            aktiveKamera = 2;
+        }
+        else
+        {
+            cameraPlayer2.enabled = false;
+            cameraPlayer1.enabled = true;
+            aktiveKamera = 1;
+        }
+        
         Player tempPlayer = currentPlayer;
         currentPlayer = otherPlayer;
         otherPlayer = tempPlayer;

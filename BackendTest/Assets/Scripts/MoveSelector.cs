@@ -25,7 +25,17 @@ public class MoveSelector : MonoBehaviour
     //Erzeugt wie beim TileSelector ein Highlight-Tile an der Stelle des Mauszeigers
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray;
+        int aktiveKamera = GameManager.instance.aktiveKamera;
+        if (aktiveKamera == 1)
+        {
+            ray = GameManager.instance.cameraPlayer1.ScreenPointToRay(Input.mousePosition);
+        }
+        else
+        {
+            ray = GameManager.instance.cameraPlayer2.ScreenPointToRay(Input.mousePosition);
+        }
+        
 
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))

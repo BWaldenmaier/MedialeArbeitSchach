@@ -6,11 +6,7 @@ public class Board : MonoBehaviour
 {
     public Material selectedMaterial;
     public Material defaultMaterial;
-    /*
-    public Material redDefaultMaterial;
-    public Material blackDefaultMaterial;
-    */
-    
+
     public GameObject AddPiece(GameObject piece, int col, int row)
     {
         Vector2Int gridPoint = new Vector2Int(col, row);
@@ -27,21 +23,15 @@ public class Board : MonoBehaviour
     {
         MeshRenderer renderers = piece.GetComponentInChildren<MeshRenderer>();
         renderers.material = selectedMaterial;
+        Vector2Int gridPoint = GameManager.instance.GridForPiece(piece);
+        piece.transform.position = new Vector3(gridPoint.x, 0, gridPoint.y);
     }
 
     public void DeselectPiece(GameObject piece)
     {
         MeshRenderer renderes = piece.GetComponent<MeshRenderer>();
         renderes.material = defaultMaterial;
-        /*
-        if (GameManager.instance.currentPlayer.name == "red")
-        {
-            renderes.material = redDefaultMaterial;
-        }
-        else
-        {
-            renderes.material = blackDefaultMaterial;
-        }
-        */
+        Vector2Int gridPoint = GameManager.instance.GridForPiece(piece);
+        piece.transform.position = new Vector3(gridPoint.x, -0.5f, gridPoint.y);
     }
 }

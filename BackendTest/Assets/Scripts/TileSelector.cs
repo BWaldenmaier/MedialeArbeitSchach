@@ -22,7 +22,19 @@ public class TileSelector : MonoBehaviour
     // Überprüft ob die Maus auf einem Feld des Spielbretts ist und erzeugt an der Position des Mauszeigers ein Highlight-Tile
     void Update()
     {
+        /*
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        */
+        Ray ray;
+        int aktiveKamera = GameManager.instance.aktiveKamera;
+        if (aktiveKamera == 1)
+        {
+            ray = GameManager.instance.cameraPlayer1.ScreenPointToRay(Input.mousePosition);
+        }
+        else
+        {
+            ray = GameManager.instance.cameraPlayer2.ScreenPointToRay(Input.mousePosition);
+        }
 
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
@@ -44,7 +56,7 @@ public class TileSelector : MonoBehaviour
                     if (GameManager.instance.DoesPieceBelongToCurrentPlayer(selectedPiece))
                     {
                         GameManager.instance.SelectPiece(selectedPiece);
-                        ExitState(selectedPiece);
+                        ExitState(selectedPiece);    
                     }
                 }
             }
