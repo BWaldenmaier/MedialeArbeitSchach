@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\3D Schach",
-    "\\3D Schach\\Assets",
-    "\\3D Schach\\Assets\\Scripts"
+    "\\BackendTest",
+    "\\BackendTest\\Assets",
+    "\\BackendTest\\Assets\\Scripts"
   ],
-  "SelectedNode": "\\3D Schach\\Assets\\Scripts\\ChessFields.cs",
+  "SelectedNode": "\\BackendTest\\Assets\\Scripts\\Board.cs",
   "PreviewInSolutionExplorer": false
 }

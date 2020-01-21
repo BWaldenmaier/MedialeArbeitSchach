@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 967b8e01c0f12724db3c244750758c3f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 967b8e01c0f12724db3c244750758c3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -256,7 +256,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &179985991
 GameObject:
@@ -268,6 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 179985992}
   - component: {fileID: 179985993}
+  - component: {fileID: 179985994}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -287,7 +288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &179985993
 MonoBehaviour:
@@ -306,25 +307,145 @@ MonoBehaviour:
   aktiveKamera: 0
   board: {fileID: 897847837}
   BauerWeiss:
-  - {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+  - {fileID: 1940283227334973997, guid: 17803d79dc802de49a3b268d5a2a36a9, type: 3}
+  - {fileID: 2095321192717553189, guid: 797193f6e7de35b4398890968ba5dd37, type: 3}
+  - {fileID: 3802382953244386335, guid: bf8a81f203fe2064f8104f3dd74a9e24, type: 3}
+  - {fileID: 4980578263056139395, guid: 5549bc37a244058498f5b7e7268380c4, type: 3}
+  - {fileID: 2471476185900671353, guid: e28c3ef93603be443b8876757fb28c8f, type: 3}
+  - {fileID: 296677980245310973, guid: 2130386fd4745bd449d0c8ecb3eccd0f, type: 3}
+  - {fileID: 51995954949239244, guid: f38fadc240a98a843b0a7ae89ac059c5, type: 3}
+  - {fileID: 8525980042222736169, guid: b5450dffa6833ca4a83ec49ba72e44bf, type: 3}
   TurmWeiss:
-  - {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
+  - {fileID: 6936400347532372325, guid: 67eeee3eeab8edc4e973683814b2a860, type: 3}
+  - {fileID: 654843013275623224, guid: a38adbbb3dc4c144c832188502f232f5, type: 3}
   SpringerWeiss:
-  - {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
+  - {fileID: 8832397598529396373, guid: 794bbc8c6ceaaf44580fcf0d3433d9ef, type: 3}
+  - {fileID: 6227475625011721233, guid: 6d40064dd7d381249b7785891a52c4ba, type: 3}
   LaeuferWeiss:
-  - {fileID: 190264, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
-  KoeniginWeiss: {fileID: 103078, guid: 6f38c700bedefe64f8364436528e5c3d, type: 3}
-  KoenigWeiss: {fileID: 119820, guid: 9e4e635002b6a524ca896adb28e8e388, type: 3}
+  - {fileID: 4380761766480921175, guid: a97c9b3e1f6f6804f84c74484c2d33ec, type: 3}
+  - {fileID: 5246211196921161652, guid: 91dac0af189869b41894a01d20ed01dc, type: 3}
+  KoeniginWeiss: {fileID: 2492618547918875471, guid: 50773f5bd2ac0e344a1e992415636fbd,
+    type: 3}
+  KoenigWeiss: {fileID: 7426979650895749070, guid: 5cfc743a1afff364aae81e61bb7b0d24,
+    type: 3}
   BauerSchwarz:
-  - {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+  - {fileID: 1940283227334973997, guid: 17803d79dc802de49a3b268d5a2a36a9, type: 3}
+  - {fileID: 2095321192717553189, guid: 797193f6e7de35b4398890968ba5dd37, type: 3}
+  - {fileID: 3802382953244386335, guid: bf8a81f203fe2064f8104f3dd74a9e24, type: 3}
+  - {fileID: 4980578263056139395, guid: 5549bc37a244058498f5b7e7268380c4, type: 3}
+  - {fileID: 2471476185900671353, guid: e28c3ef93603be443b8876757fb28c8f, type: 3}
+  - {fileID: 296677980245310973, guid: 2130386fd4745bd449d0c8ecb3eccd0f, type: 3}
+  - {fileID: 51995954949239244, guid: f38fadc240a98a843b0a7ae89ac059c5, type: 3}
+  - {fileID: 8525980042222736169, guid: b5450dffa6833ca4a83ec49ba72e44bf, type: 3}
   TurmSchwarz:
-  - {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
+  - {fileID: 6439287996623802134, guid: dd522c3493fbb2e4b842192e26f064dd, type: 3}
+  - {fileID: 2699535467826425864, guid: bfa12347d2f29234eaedb4b5807dcdc1, type: 3}
   SpringerSchwarz:
-  - {fileID: 196802, guid: b6c7ad354ac474944ba26b2895a59759, type: 3}
+  - {fileID: 7343396746135386941, guid: a67b28a1512a7b441bd7468b40c48326, type: 3}
+  - {fileID: 8377972841572211889, guid: a0d6bfd5d952c3a4a9fcff7ce21b8280, type: 3}
   LaeuferSchwarz:
-  - {fileID: 196866, guid: a71fd906a2159e247ab4d632e46947db, type: 3}
-  KoeniginSchwarz: {fileID: 184594, guid: 1f7a3b3d104b8e44cb39f5356ae1d0bb, type: 3}
-  KoenigSchwarz: {fileID: 130826, guid: 861e95a585868b643bf2e4a1d0ae63b7, type: 3}
+  - {fileID: 6416834903612574248, guid: 2349aea4b5237d34bb992223cd8dcb4e, type: 3}
+  - {fileID: 4714690091142197493, guid: 68fe776cab830334a80e84b366298822, type: 3}
+  KoeniginSchwarz: {fileID: 8072422533542484564, guid: 70c1fe2df6b7d4c42bbd104ef38804e1,
+    type: 3}
+  KoenigSchwarz: {fileID: 2855687839830969091, guid: 2b7d46d8faeaf7e4aa8a937fc504653f,
+    type: 3}
+--- !u!82 &179985994
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179985991}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &203210887
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +635,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897847835
 GameObject:
@@ -577,7 +698,7 @@ Transform:
   m_Children:
   - {fileID: 913988920}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &897847839
 BoxCollider:
@@ -690,7 +811,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 35, y: 180, z: 0}
 --- !u!4 &913988920 stripped
 Transform:
@@ -791,7 +912,7 @@ RectTransform:
   m_Children:
   - {fileID: 2082705703}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1447,6 +1568,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056468482}
   m_CullTransparentMesh: 0
+--- !u!1 &2071897216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071897218}
+  - component: {fileID: 2071897217}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2071897217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071897216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a83c3c022e8c804d87ee59e4a54777b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Pikachu
+    clip: {fileID: 8300000, guid: 8aba14e398c1ec044a7b0ed01db62f49, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Pikachu
+    clip: {fileID: 8300000, guid: 8aba14e398c1ec044a7b0ed01db62f49, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &2071897218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071897216}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082705702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,5 +1777,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}

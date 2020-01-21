@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Board.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\Scripts\Pieces\Springer.cs" />
     <Compile Include="Assets\Scripts\Pieces\Turm.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\TileSelector.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/bwald/Desktop/Mediale Arbeit 3D Schach/MedialeArbeitSchach/BackendTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
