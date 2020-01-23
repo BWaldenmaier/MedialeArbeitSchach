@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public Camera cameraPlayer1;
     public Camera cameraPlayer2;
     public int aktiveKamera;
-    
+
     public Board board;
     public List<GameObject> BauerWeiss;
     public List<GameObject> TurmWeiss;
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         
         currentPlayer = black;
         otherPlayer = white;
-        
+      
         InitialSetup();
     }
 
