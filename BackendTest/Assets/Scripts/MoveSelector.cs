@@ -13,7 +13,18 @@ public class MoveSelector : MonoBehaviour
     private GameObject movingPiece;
     private List<Vector2Int> moveLocations;
     private List<GameObject> locationHighlights;
-    
+
+    public bool turnHelper = true;
+
+    public void changeTurnHelper(){
+           if (turnHelper == true) {
+            turnHelper = false;
+           }
+           else if (turnHelper == false){
+            turnHelper = true;
+           }
+    }
+
     // Erzeugt ein Highlight-Tile und deaktiviert es direkt anschließend
     void Start()
     {
@@ -95,7 +106,7 @@ public class MoveSelector : MonoBehaviour
         TileSelector selector = GetComponent<TileSelector>();
         selector.EnterState();
     }
-    
+
     public void EnterState(GameObject piece)
     {
         movingPiece = piece;
@@ -109,18 +120,20 @@ public class MoveSelector : MonoBehaviour
             CancelMove();
         }
 
-        foreach (Vector2Int loc in moveLocations)
-        {
-            GameObject highlight;
-            if (GameManager.instance.PieceAtGrid(loc))
+        if (turnHelper) {
+            foreach (Vector2Int loc in moveLocations)
             {
-                highlight = Instantiate(attackLocationPrefab, new Vector3(loc.x, -0.4f, loc.y), Quaternion.identity, gameObject.transform);
+                GameObject highlight;
+                if (GameManager.instance.PieceAtGrid(loc))
+                {
+                    highlight = Instantiate(attackLocationPrefab, new Vector3(loc.x, -0.4f, loc.y), Quaternion.identity, gameObject.transform);
+                }
+                else
+                {
+                    highlight = Instantiate(moveLocationPrefab, new Vector3(loc.x, -0.4f, loc.y), Quaternion.identity, gameObject.transform);
+                }
+                locationHighlights.Add(highlight);
             }
-            else
-            {
-                highlight = Instantiate(moveLocationPrefab, new Vector3(loc.x, -0.4f, loc.y), Quaternion.identity, gameObject.transform);
-            }
-            locationHighlights.Add(highlight);
         }
     }
 

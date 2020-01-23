@@ -8,21 +8,19 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject PauseMenuUI;
-
+ 
     // Update is called once per frame
     void Update()
     {	
 		if (Input.GetKeyDown(KeyCode.Escape)){
-
             if (GameIsPaused)
             {
-                Resume();
+                Resume();                
             }
             else
             {              
-                Pause();
+                Pause();  
             }
-
         }    
     }
 
