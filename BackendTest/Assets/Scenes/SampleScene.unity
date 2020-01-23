@@ -1603,8 +1603,118 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
-  - name: Pikachu
-    clip: {fileID: 8300000, guid: 8aba14e398c1ec044a7b0ed01db62f49, type: 3}
+  - name: Arbok
+    clip: {fileID: 8300000, guid: 5df3dc3f5595964459e4591ea14917c0, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Bulbasaur
+    clip: {fileID: 8300000, guid: d0b0865803a615944aed4a6e635eea81, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Charmander
+    clip: {fileID: 8300000, guid: 9e379af5000f26d48bda3a86722ecb70, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Dragonair
+    clip: {fileID: 8300000, guid: eaa82b665d1b767458b4dd1549c6d03f, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Dratini
+    clip: {fileID: 8300000, guid: 29c8f9c3d164b1d40ab8963bb8de1ab6, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Eevee
+    clip: {fileID: 8300000, guid: 147ba683f0d9bb149818973276e06438, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Ekans
+    clip: {fileID: 8300000, guid: b67d26548684f0a40ba68b568b493153, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Jigglypuff
+    clip: {fileID: 8300000, guid: 17980e7ec3a79aa45bd0bec5063af406, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Mew
+    clip: {fileID: 8300000, guid: 99e9f54eda02b0d4faee8e64fb398c62, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Mewtwo
+    clip: {fileID: 8300000, guid: 0fd43e98d0023d34f967dc9395d36d47, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Nidoking
+    clip: {fileID: 8300000, guid: d4474c6d54d222848a8c33b61f839557, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Nidoqueen
+    clip: {fileID: 8300000, guid: 7d8a8fb0a57d36e4c892879ef79e9e52, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Ninetales
+    clip: {fileID: 8300000, guid: 27cd8d5c59ac2574f8c40beb6d908021, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Ponyta
+    clip: {fileID: 8300000, guid: 9b5185a7fe1928344bf21e3518373119, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Psyduck
+    clip: {fileID: 8300000, guid: aaee2bce54cf23843b9aab7872ea7b45, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Seadra
+    clip: {fileID: 8300000, guid: 72714a536b2f77640b418a364e0dedb4, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Horsea
+    clip: {fileID: 8300000, guid: f97dc285219a42642b3b1425fd6129c3, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Slowpoke
+    clip: {fileID: 8300000, guid: ac5970569a3388346bbb8de279da9876, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Growlithe
+    clip: {fileID: 8300000, guid: fca9bf6eed465b9498488282626620c0, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Vulpix
+    clip: {fileID: 8300000, guid: 03191760f9f89da479a33e3f84a15278, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Squirtle
+    clip: {fileID: 8300000, guid: 5af03e26b98048a4eb987770cda425a7, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Rapidash
+    clip: {fileID: 8300000, guid: 9b5185a7fe1928344bf21e3518373119, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Arcanine
+    clip: {fileID: 8300000, guid: 2eef66766894ef246b2e9bc5dc57cb26, type: 3}
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
