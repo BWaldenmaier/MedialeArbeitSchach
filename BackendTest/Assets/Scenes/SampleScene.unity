@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964128, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -311,10 +311,6 @@ MonoBehaviour:
   - {fileID: 2095321192717553189, guid: 797193f6e7de35b4398890968ba5dd37, type: 3}
   - {fileID: 3802382953244386335, guid: bf8a81f203fe2064f8104f3dd74a9e24, type: 3}
   - {fileID: 4980578263056139395, guid: 5549bc37a244058498f5b7e7268380c4, type: 3}
-  - {fileID: 2471476185900671353, guid: e28c3ef93603be443b8876757fb28c8f, type: 3}
-  - {fileID: 296677980245310973, guid: 2130386fd4745bd449d0c8ecb3eccd0f, type: 3}
-  - {fileID: 51995954949239244, guid: f38fadc240a98a843b0a7ae89ac059c5, type: 3}
-  - {fileID: 8525980042222736169, guid: b5450dffa6833ca4a83ec49ba72e44bf, type: 3}
   TurmWeiss:
   - {fileID: 6936400347532372325, guid: 67eeee3eeab8edc4e973683814b2a860, type: 3}
   - {fileID: 654843013275623224, guid: a38adbbb3dc4c144c832188502f232f5, type: 3}
@@ -329,10 +325,6 @@ MonoBehaviour:
   KoenigWeiss: {fileID: 7426979650895749070, guid: 5cfc743a1afff364aae81e61bb7b0d24,
     type: 3}
   BauerSchwarz:
-  - {fileID: 1940283227334973997, guid: 17803d79dc802de49a3b268d5a2a36a9, type: 3}
-  - {fileID: 2095321192717553189, guid: 797193f6e7de35b4398890968ba5dd37, type: 3}
-  - {fileID: 3802382953244386335, guid: bf8a81f203fe2064f8104f3dd74a9e24, type: 3}
-  - {fileID: 4980578263056139395, guid: 5549bc37a244058498f5b7e7268380c4, type: 3}
   - {fileID: 2471476185900671353, guid: e28c3ef93603be443b8876757fb28c8f, type: 3}
   - {fileID: 296677980245310973, guid: 2130386fd4745bd449d0c8ecb3eccd0f, type: 3}
   - {fileID: 51995954949239244, guid: f38fadc240a98a843b0a7ae89ac059c5, type: 3}
@@ -684,7 +676,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedMaterial: {fileID: 2100000, guid: 95208828ba39c9d47a59dba4ca3ef4cc, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: fdf806cb46d6a40418581d1568ff1c94, type: 2}
+  whiteMaterial: {fileID: 2100000, guid: c4172b95a1cefad48a9cce0f4db13fd6, type: 2}
+  blackMaterial: {fileID: 2100000, guid: b822fd53aff5e8f418c8081daaff0c2f, type: 2}
 --- !u!4 &897847838
 Transform:
   m_ObjectHideFlags: 0
@@ -1315,12 +1308,12 @@ PrefabInstance:
     - target: {fileID: 429095341816210513, guid: 27da1ade17a703a40b00dbbe94bce8f3,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 429095341816210513, guid: 27da1ade17a703a40b00dbbe94bce8f3,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8696436566794818124, guid: 27da1ade17a703a40b00dbbe94bce8f3,
         type: 3}

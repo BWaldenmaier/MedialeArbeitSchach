@@ -177,7 +177,15 @@ public class GameManager : MonoBehaviour
     //Stellt die Figuren auf die übergebene Position und fügt sie dem Figuren-Array des jeweiligen Spielers hinzu
     public void AddPiece(GameObject prefab, Player player, int col, int row)
     {
-        GameObject pieceObject = board.AddPiece(prefab, col, row);
+        GameObject pieceObject;
+        if (player.name == "black")
+        {
+            pieceObject = board.AddPiece(prefab, col, row, "black");
+        }
+        else
+        {
+            pieceObject = board.AddPiece(prefab, col, row, "white");
+        }
         player.pieces.Add(pieceObject);
         pieces[col, row] = pieceObject;
     }

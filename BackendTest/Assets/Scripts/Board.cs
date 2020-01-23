@@ -1,17 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Board : MonoBehaviour
 {
     public Material selectedMaterial;
-    public Material defaultMaterial;
+    public Material whiteMaterial;
+    public Material blackMaterial;
 
-    public GameObject AddPiece(GameObject piece, int col, int row)
+    public GameObject AddPiece(GameObject piece, int col, int row, String playerName)
     {
+        GameObject newPiece;
         Vector2Int gridPoint = new Vector2Int(col, row);
-        GameObject newPiece = Instantiate(piece, new Vector3(gridPoint.x, -0.5f, gridPoint.y), Quaternion.identity);   
-          
+        if (playerName == "black")
+        {
+            MeshRenderer renderes = piece.GetComponent<MeshRenderer>();
+            renderes.material = blackMaterial;
+            newPiece = Instantiate(piece, new Vector3(gridPoint.x, -0.5f, gridPoint.y), Quaternion.Euler(0,90f,0));
+        }
+        else
+        {
+            newPiece = Instantiate(piece, new Vector3(gridPoint.x, -0.5f, gridPoint.y), Quaternion.Euler(0,-90f,0));
+            MeshRenderer renderes = piece.GetComponent<MeshRenderer>();
+            renderes.material = whiteMaterial;
+        }
+        
         return newPiece;
     }
 
@@ -27,7 +41,7 @@ public class Board : MonoBehaviour
         renderers.material = selectedMaterial;
         Vector2Int gridPoint = GameManager.instance.GridForPiece(piece);
         piece.transform.position = new Vector3(gridPoint.x, 0, gridPoint.y);
-
+/*
         if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Pikachu")){
             FindObjectOfType<AudioManager>().Play("Pikachu");
         }
@@ -100,6 +114,7 @@ public class Board : MonoBehaviour
         else if (piece.name.Substring(0, piece.name.Length-11).Equals("Rook_Dratini")){
             FindObjectOfType<AudioManager>().Play("Dratini");
         }
+        */
 
         Debug.Log(piece.name + "selected");
     }
@@ -107,7 +122,14 @@ public class Board : MonoBehaviour
     public void DeselectPiece(GameObject piece)
     {
         MeshRenderer renderes = piece.GetComponent<MeshRenderer>();
-        renderes.material = defaultMaterial;
+        if (GameManager.instance.currentPlayer.name == "black")
+        {
+            renderes.material = blackMaterial;
+        }
+        else
+        {
+            renderes.material = whiteMaterial;
+        }
         Vector2Int gridPoint = GameManager.instance.GridForPiece(piece);
         piece.transform.position = new Vector3(gridPoint.x, -0.5f, gridPoint.y);
     }
