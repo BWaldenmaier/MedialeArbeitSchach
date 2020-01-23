@@ -22,7 +22,12 @@ public class Board : MonoBehaviour
 
     public void SelectPiece(GameObject piece)
     {
-        Debug.Log(piece.name + "selected");
+       
+        MeshRenderer renderers = piece.GetComponentInChildren<MeshRenderer>();
+        renderers.material = selectedMaterial;
+        Vector2Int gridPoint = GameManager.instance.GridForPiece(piece);
+        piece.transform.position = new Vector3(gridPoint.x, 0, gridPoint.y);
+
         if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Pikachu")){
             FindObjectOfType<AudioManager>().Play("Pikachu");
         }
@@ -72,7 +77,7 @@ public class Board : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Nidoqueen");
         }
         else if (piece.name.Substring(0, piece.name.Length-11).Equals("Knight_Horsea")){
-            FindObjectOfType<AudioManager>().Play("Squirtle");
+            FindObjectOfType<AudioManager>().Play("Horsea");
         }
         else if (piece.name.Substring(0, piece.name.Length-11).Equals("Knight_Seadra")){
             FindObjectOfType<AudioManager>().Play("Seadra");
@@ -95,16 +100,8 @@ public class Board : MonoBehaviour
         else if (piece.name.Substring(0, piece.name.Length-11).Equals("Rook_Dratini")){
             FindObjectOfType<AudioManager>().Play("Dratini");
         }
-        
-        
-        
 
-        MeshRenderer renderers = piece.GetComponentInChildren<MeshRenderer>();
-        renderers.material = selectedMaterial;
-        Vector2Int gridPoint = GameManager.instance.GridForPiece(piece);
-        piece.transform.position = new Vector3(gridPoint.x, 0, gridPoint.y);
-
-        
+        Debug.Log(piece.name + "selected");
     }
 
     public void DeselectPiece(GameObject piece)
