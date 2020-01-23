@@ -36,87 +36,91 @@ public class Board : MonoBehaviour
 
     public void SelectPiece(GameObject piece)
     {
-       
+
         MeshRenderer renderers = piece.GetComponentInChildren<MeshRenderer>();
         renderers.material = selectedMaterial;
         Vector2Int gridPoint = GameManager.instance.GridForPiece(piece);
         piece.transform.position = new Vector3(gridPoint.x, 0, gridPoint.y);
-/*
-        if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Pikachu")){
-            FindObjectOfType<AudioManager>().Play("Pikachu");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Squirtle")){
-            FindObjectOfType<AudioManager>().Play("Squirtle");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Bulbasaur")){
-            FindObjectOfType<AudioManager>().Play("Bulbasaur");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Charmander")){
-            FindObjectOfType<AudioManager>().Play("Charmander");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Eevee")){
-            FindObjectOfType<AudioManager>().Play("Eevee");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Jigglypuff")){
-            FindObjectOfType<AudioManager>().Play("Jigglypuff");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Psyduck")){
-            FindObjectOfType<AudioManager>().Play("Psyduck");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Pawn_Slowpoke")){
-            FindObjectOfType<AudioManager>().Play("Slowpoke");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Bioshop_Arcanine")){
-            FindObjectOfType<AudioManager>().Play("Arcanine");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Bioshop_Growlithe")){
-            FindObjectOfType<AudioManager>().Play("Growlithe");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Bioshop_Ninetales")){
-            FindObjectOfType<AudioManager>().Play("Ninetales");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Bioshop_Vulpix")){
-            FindObjectOfType<AudioManager>().Play("Vulpix");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-23).Equals("King_Mewtwo")){
-            FindObjectOfType<AudioManager>().Play("Mewtwo");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("King_Nidoking")){
-            FindObjectOfType<AudioManager>().Play("Nidoking");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Queen_Mew")){
-            FindObjectOfType<AudioManager>().Play("Mew");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Queen_Nidoqueen")){
-            FindObjectOfType<AudioManager>().Play("Nidoqueen");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Knight_Horsea")){
-            FindObjectOfType<AudioManager>().Play("Horsea");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Knight_Seadra")){
-            FindObjectOfType<AudioManager>().Play("Seadra");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Knight_Ponyta")){
-            FindObjectOfType<AudioManager>().Play("Ponyta");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Knight_Rapidash")){
-            FindObjectOfType<AudioManager>().Play("Rapidash");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Rook_Arbok")){
-            FindObjectOfType<AudioManager>().Play("Arbok");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Rook_Ekans")){
-            FindObjectOfType<AudioManager>().Play("Ekans");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Rook_Dragonair")){
-            FindObjectOfType<AudioManager>().Play("Dragonair");
-        }
-        else if (piece.name.Substring(0, piece.name.Length-11).Equals("Rook_Dratini")){
-            FindObjectOfType<AudioManager>().Play("Dratini");
-        }
-        */
 
         Debug.Log(piece.name + "selected");
+
+        string nameOfPiece = piece.name;
+
+        switch (nameOfPiece)
+        {
+            case "Pawn_Pikachu (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Pikachu");
+                break;
+            case "Pawn_Squirtle (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Squirtle");
+                break;
+            case "Pawn_Bulbasaur (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Bulbasaur");
+                break;
+            case "Pawn_Charmander (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Charmander");
+                break;
+            case "Pawn_Eevee (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Eevee");
+                break;
+            case "Pawn_Jigglypuff (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Jigglypuff");
+                break;
+            case "Pawn_Psyduck (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Psyduck");
+                break;
+            case "Pawn_Slowpoke (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Slowpoke");
+                break;
+            case "Bishop_Arcanine (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Arcanine");
+                break;
+            case "Bishop_Growlithe (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Growlithe");
+                break;
+            case "Bishop_Ninetales (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Ninetales");
+                break;
+            case "Bishop_Vulpix (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Vulpix");
+                break;
+            case "King_Mewtwo_no_supports (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Mewtwo");
+                break;
+            case "King_Nidoking (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Nidoking");
+                break;
+            case "Queen_Mew (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Mew");
+                break;
+            case "Queen_Nidoqueen (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Nidoqueen");
+                break;
+            case "Knight_Horsea (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Horsea");
+                break;
+            case "Knight_Seadra (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Seadra");
+                break;
+            case "Knight_Ponyta (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Ponyta");
+                break;
+            case "Knight_Rapidash (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Rapidash");
+                break;
+            case "Rook_Arbok (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Arbok");
+                break;
+            case "Rook_Ekans (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Ekans");
+                break;
+            case "Rook_Dragonair (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Dragonair");
+                break;
+            case "Rook_Dratini (1)(Clone)":
+                FindObjectOfType<AudioManager>().Play("Dratini");
+                break;
+        }
     }
 
     public void DeselectPiece(GameObject piece)
