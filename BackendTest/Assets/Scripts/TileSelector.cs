@@ -14,7 +14,7 @@ public class TileSelector : MonoBehaviour
     // Erzeugt ein Highlight-Tile und deaktiviert es direkt anschließend
     void Start()
     {
-        Vector3 point = new Vector3(0, -0.4f, 0);
+        Vector3 point = new Vector3(0, 0.47f, 0);
         tileHighlight = Instantiate(tileHighlightPrefab, point, Quaternion.identity, gameObject.transform);
         tileHighlight.SetActive(false);
     }
@@ -48,7 +48,7 @@ public class TileSelector : MonoBehaviour
             else
             {
                 tileHighlight.SetActive(true);
-                tileHighlight.transform.position = new Vector3(gridPoint.x, -0.4f, gridPoint.y);
+                tileHighlight.transform.position = new Vector3(gridPoint.x, -0.47f, gridPoint.y);
                 //Wenn die linke Maustaste gedrückt wird wird überprüft ob die Figur zum Spieler gehört der momentan an der Reihe ist 
                 if (Input.GetMouseButtonDown(0))
                 {

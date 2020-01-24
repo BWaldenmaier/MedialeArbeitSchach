@@ -903,7 +903,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897847835}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -939,6 +939,7 @@ GameObject:
   - component: {fileID: 912141942}
   - component: {fileID: 912141941}
   - component: {fileID: 912141944}
+  - component: {fileID: 912141945}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -1027,6 +1028,19 @@ MonoBehaviour:
   freeLookSensitivity: 3
   zoomSensitivity: 10
   fastZoomSensitivity: 50
+--- !u!65 &912141945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912141940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &913988920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 429095341816210513, guid: 27da1ade17a703a40b00dbbe94bce8f3,
@@ -1912,6 +1926,11 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8696436566794818124, guid: 27da1ade17a703a40b00dbbe94bce8f3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2456962710920237807, guid: 27da1ade17a703a40b00dbbe94bce8f3,
         type: 3}
       propertyPath: m_Enabled
@@ -2396,6 +2415,7 @@ GameObject:
   - component: {fileID: 2141483136}
   - component: {fileID: 2141483135}
   - component: {fileID: 2141483138}
+  - component: {fileID: 2141483139}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -2435,7 +2455,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 26.991467
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2484,3 +2504,16 @@ MonoBehaviour:
   freeLookSensitivity: 3
   zoomSensitivity: 10
   fastZoomSensitivity: 50
+--- !u!65 &2141483139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141483134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
