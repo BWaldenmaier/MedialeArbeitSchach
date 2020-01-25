@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class GameManager : MonoBehaviour
 {
@@ -213,7 +214,7 @@ public class GameManager : MonoBehaviour
         GameObject pieceToCapture = PieceAtGrid(gridPoint);
         //Gewinn Benachrichtigung wenn König geschlagen wird
         if (pieceToCapture.GetComponent<Piece>().GetType().ToString() == "Koenig")
-        {
+        { 
             WinningAnimation();
         }
         
@@ -308,9 +309,11 @@ public class GameManager : MonoBehaviour
         currentPlayer = otherPlayer;
         otherPlayer = tempPlayer;
     }
-
+  
     private void WinningAnimation()
-    {
-        Debug.Log(currentPlayer.name + " hat das Spiel gewonnen!");
+    {    
+        //Debug.Log(currentPlayer.name + " hat das Spiel gewonnen!"); 
+        PlayerPrefs.SetString("Winner", currentPlayer.name);
+        SceneManager.LoadScene(2);
     }
 }

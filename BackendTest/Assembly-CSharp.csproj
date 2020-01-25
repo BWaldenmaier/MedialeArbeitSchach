@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\TileSelector.cs" />
     <Compile Include="Assets\Scripts\Toggle.cs" />
+    <Compile Include="Assets\Scripts\WinMenu.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/bwald/Desktop/Mediale Arbeit/MedialeArbeitSchach/BackendTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
