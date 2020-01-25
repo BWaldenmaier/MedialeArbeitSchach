@@ -328,12 +328,14 @@ public class GameManager : MonoBehaviour
         if (cameraPlayer1.enabled)
         {
             cameraPlayer1.enabled = false;
+            cameraPlayer2.transform.SetPositionAndRotation(new Vector3(3.629f, 3.039f, 9.611f), Quaternion.Euler (35.0f,180.0f,0f));
             cameraPlayer2.enabled = true;
         }
         else
         {
             cameraPlayer2.enabled = false;
-            cameraPlayer1.enabled = true;
+            cameraPlayer1.transform.SetPositionAndRotation(new Vector3(3.47f, 3.003f, -2.753f), Quaternion.Euler (32.681f,0f,0f));
+            cameraPlayer1.enabled = true;    
         }
         
         Player tempPlayer = currentPlayer;
