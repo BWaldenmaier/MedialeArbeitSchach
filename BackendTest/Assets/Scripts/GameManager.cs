@@ -50,8 +50,8 @@ public class GameManager : MonoBehaviour
         black = new Player("black",true);
         white = new Player("white",false);
         
-        currentPlayer = black;
-        otherPlayer = white;
+        currentPlayer = white;
+        otherPlayer = black;
       
         InitialSetup();
     }
@@ -59,11 +59,11 @@ public class GameManager : MonoBehaviour
     //Figuren werden mit der AddPiece-Funktion aufs Spielfeld gestellt
     private void InitialSetup()
     {
-        AddPiece(KoeniginSchwarz, black, 3, 0);
-        AddPiece(KoenigSchwarz, black, 4, 0);
+        AddPiece(KoeniginSchwarz, black, 4, 0);
+        AddPiece(KoenigSchwarz, black, 3, 0);
         
-        AddPiece(KoeniginWeiss, white, 3, 7);
-        AddPiece(KoenigWeiss, white, 4,7);
+        AddPiece(KoeniginWeiss, white, 4, 7);
+        AddPiece(KoenigWeiss, white, 3,7);
         
         
         int LaeuferWeissCount = LaeuferWeiss.Count;
@@ -168,8 +168,8 @@ public class GameManager : MonoBehaviour
             BauerWeissIterator -= 1;
         }
 
-        cameraPlayer1.enabled = true;
-        cameraPlayer2.enabled = false;
+        cameraPlayer1.enabled = false;
+        cameraPlayer2.enabled = true;
 
     }
 
