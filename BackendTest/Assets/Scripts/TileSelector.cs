@@ -21,7 +21,7 @@ public class TileSelector : MonoBehaviour
 
     // Überprüft ob die Maus auf einem Feld des Spielbretts ist und erzeugt an der Position des Mauszeigers ein Highlight-Tile
     private void Update()
-    {
+    {   if (Time.timeScale != 0){
         Ray ray;
         if (GameManager.instance.cameraPlayer1.enabled)
         {
@@ -56,7 +56,7 @@ public class TileSelector : MonoBehaviour
                     }
                 }
             }
-
+        }
         }
     }
 
