@@ -26,7 +26,7 @@ public class MoveSelector : MonoBehaviour
     }
 
     // Erzeugt ein Highlight-Tile und deaktiviert es direkt anschließend
-    void Start()
+    private void Start()
     {
         this.enabled = false;
         tileHighlight = Instantiate(tileHighlightPrefab, new Vector3Int(0, 0, 0), Quaternion.identity, gameObject.transform);
@@ -34,11 +34,10 @@ public class MoveSelector : MonoBehaviour
     }
 
     //Erzeugt wie beim TileSelector ein Highlight-Tile an der Stelle des Mauszeigers
-    void Update()
+    private void Update()
     {
         Ray ray;
-        int aktiveKamera = GameManager.instance.aktiveKamera;
-        if (aktiveKamera == 1)
+        if (GameManager.instance.cameraPlayer1.enabled)
         {
             ray = GameManager.instance.cameraPlayer1.ScreenPointToRay(Input.mousePosition);
         }
@@ -137,7 +136,7 @@ public class MoveSelector : MonoBehaviour
         }
     }
 
-    public void ExitState()
+    private void ExitState()
     {
         this.enabled = false;
         TileSelector selector = GetComponent<TileSelector>();

@@ -17,7 +17,8 @@ public class Bauer : Piece
       
       Vector2Int forwardTwo = new Vector2Int(gridPoint.x, gridPoint.y + 2 * forwardDirection);
       if (GameManager.instance.HasBauerMoved(gameObject) == false &&
-          GameManager.instance.PieceAtGrid(forwardTwo) == false)
+          GameManager.instance.PieceAtGrid(forwardTwo) == false &&
+          GameManager.instance.PieceAtGrid(forwardOne) == false)
       {
          locations.Add(forwardTwo);
       }

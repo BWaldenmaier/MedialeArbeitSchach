@@ -42,7 +42,6 @@ public class Board : MonoBehaviour
         Vector2Int gridPoint = GameManager.instance.GridForPiece(piece);
         piece.transform.position = new Vector3(gridPoint.x, 0, gridPoint.y);
 
-        Debug.Log(piece.name + "selected");
 
         string nameOfPiece = piece.name;
 
