@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     private GameObject[,] pieces;
     private List<GameObject> movedBauern;
+    private int capturedRowIteratorBlack;
+    private int capturedRowIteratorWhite;
 
     private Player black;
     private Player white;
@@ -170,6 +172,8 @@ public class GameManager : MonoBehaviour
 
         cameraPlayer1.enabled = false;
         cameraPlayer2.enabled = true;
+        capturedRowIteratorBlack = 0;
+        capturedRowIteratorWhite = 0;
 
     }
 
@@ -221,7 +225,34 @@ public class GameManager : MonoBehaviour
         currentPlayer.capturedPieces.Add(pieceToCapture);
         otherPlayer.pieces.Remove(pieceToCapture);
         pieces[gridPoint.x, gridPoint.y] = null;
-        Destroy(pieceToCapture);
+        if (currentPlayer.name == "white")
+        {
+            double capturedRows = Math.Ceiling((currentPlayer.capturedPieces.Count / 4.0));
+            pieceToCapture.transform.position = new Vector3(-1f * (float)capturedRows,-0.5f,7f-(capturedRowIteratorWhite));
+            pieceToCapture.transform.rotation = Quaternion.Euler(0,270f,0);
+            if (capturedRowIteratorWhite < 3)
+            {
+                capturedRowIteratorWhite++;
+            }
+            else
+            {
+                capturedRowIteratorWhite = 0;
+            }
+        }
+        else
+        {
+            double capturedRows = Math.Ceiling((currentPlayer.capturedPieces.Count / 4.0));
+            pieceToCapture.transform.position = new Vector3(7f + (float)capturedRows,-0.5f,capturedRowIteratorBlack);
+            pieceToCapture.transform.rotation = Quaternion.Euler(0,90f,0);
+            if (capturedRowIteratorBlack < 3)
+            {
+                capturedRowIteratorBlack++;
+            }
+            else
+            {
+                capturedRowIteratorBlack = 0;
+            }
+        }
     }
 
     //gibt das GameObject zurück das auf dem übergebenen Punkt steht
