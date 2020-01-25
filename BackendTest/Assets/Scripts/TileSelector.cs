@@ -12,7 +12,7 @@ public class TileSelector : MonoBehaviour
     private GameObject tileHighlight;
     
     // Erzeugt ein Highlight-Tile und deaktiviert es direkt anschließend
-    void Start()
+    private void Start()
     {
         Vector3 point = new Vector3(0, 0.47f, 0);
         tileHighlight = Instantiate(tileHighlightPrefab, point, Quaternion.identity, gameObject.transform);
@@ -20,14 +20,10 @@ public class TileSelector : MonoBehaviour
     }
 
     // Überprüft ob die Maus auf einem Feld des Spielbretts ist und erzeugt an der Position des Mauszeigers ein Highlight-Tile
-    void Update()
+    private void Update()
     {
-        /*
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        */
         Ray ray;
-        int aktiveKamera = GameManager.instance.aktiveKamera;
-        if (aktiveKamera == 1)
+        if (GameManager.instance.cameraPlayer1.enabled)
         {
             ray = GameManager.instance.cameraPlayer1.ScreenPointToRay(Input.mousePosition);
         }
@@ -53,7 +49,7 @@ public class TileSelector : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     GameObject selectedPiece = GameManager.instance.PieceAtGrid(gridPoint);
-                    if (GameManager.instance.DoesPieceBelongToCurrentPlayer(selectedPiece))
+                    if (GameManager.instance.currentPlayer.pieces.Contains(selectedPiece))
                     {
                         GameManager.instance.SelectPiece(selectedPiece);
                         ExitState(selectedPiece);    

@@ -126,7 +126,7 @@ public class FreeCam : MonoBehaviour
     /// <summary>
     /// Enable free looking.
     /// </summary>
-    public void StartLooking()
+    private void StartLooking()
     {
         looking = true;
         Cursor.visible = false;
@@ -136,7 +136,7 @@ public class FreeCam : MonoBehaviour
     /// <summary>
     /// Disable free looking.
     /// </summary>
-    public void StopLooking()
+    private void StopLooking()
     {
         looking = false;
         Cursor.visible = true;

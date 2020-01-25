@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 
     public Camera cameraPlayer1;
     public Camera cameraPlayer2;
-    public int aktiveKamera;
 
     public Board board;
     public List<GameObject> BauerWeiss;
@@ -170,22 +169,13 @@ public class GameManager : MonoBehaviour
 
         cameraPlayer1.enabled = true;
         cameraPlayer2.enabled = false;
-        aktiveKamera = 1;
 
     }
 
     //Stellt die Figuren auf die übergebene Position und fügt sie dem Figuren-Array des jeweiligen Spielers hinzu
-    public void AddPiece(GameObject prefab, Player player, int col, int row)
-    {
-        GameObject pieceObject;
-        if (player.name == "black")
-        {
-            pieceObject = board.AddPiece(prefab, col, row, "black");
-        }
-        else
-        {
-            pieceObject = board.AddPiece(prefab, col, row, "white");
-        }
+    private void AddPiece(GameObject prefab, Player player, int col, int row)
+    { 
+        GameObject pieceObject = board.AddPiece(prefab, col, row, player.name);
         player.pieces.Add(pieceObject);
         pieces[col, row] = pieceObject;
     }
@@ -222,8 +212,13 @@ public class GameManager : MonoBehaviour
     {
         GameObject pieceToCapture = PieceAtGrid(gridPoint);
         //Gewinn Benachrichtigung wenn König geschlagen wird
+        if (pieceToCapture.GetComponent<Piece>().GetType().ToString() == "Koenig")
+        {
+            WinningAnimation();
+        }
+        
         currentPlayer.capturedPieces.Add(pieceToCapture);
-        Debug.Log(currentPlayer.capturedPieces.Count);
+        otherPlayer.pieces.Remove(pieceToCapture);
         pieces[gridPoint.x, gridPoint.y] = null;
         Destroy(pieceToCapture);
     }
@@ -245,13 +240,7 @@ public class GameManager : MonoBehaviour
         Piece piece = pieceObject.GetComponent<Piece>();
         Vector2Int gridPoint = GridForPiece(pieceObject);
         List<Vector2Int> locations = piece.MoveLocations(gridPoint);
-        List<Vector2Int> opponentLocations = new List<Vector2Int>();
 
-        foreach (var opponent in otherPlayer.pieces)
-        {
-            
-        }
-        
         //Locations außerhalb des Boards ausfiltern
         locations.RemoveAll(gp => gp.x < 0 || gp.x > 7 || gp.y < 0 || gp.y > 7);
 
@@ -295,12 +284,6 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    //Gibt zurück ob die übergebene Figur im eigenen Figuren-Array vorhanden ist
-    public bool DoesPieceBelongToCurrentPlayer(GameObject piece)
-    {
-        return currentPlayer.pieces.Contains(piece);
-    }
-
     public bool HasBauerMoved(GameObject bauer)
     {
         return movedBauern.Contains(bauer);
@@ -314,17 +297,20 @@ public class GameManager : MonoBehaviour
         {
             cameraPlayer1.enabled = false;
             cameraPlayer2.enabled = true;
-            aktiveKamera = 2;
         }
         else
         {
             cameraPlayer2.enabled = false;
             cameraPlayer1.enabled = true;
-            aktiveKamera = 1;
         }
         
         Player tempPlayer = currentPlayer;
         currentPlayer = otherPlayer;
         otherPlayer = tempPlayer;
+    }
+
+    private void WinningAnimation()
+    {
+        Debug.Log(currentPlayer.name + " hat das Spiel gewonnen!");
     }
 }
