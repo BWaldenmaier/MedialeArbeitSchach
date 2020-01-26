@@ -249,10 +249,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Matthias Sch\xFClein\nTim Herold\n\nBernd Waldenmaier\nMatthias Sch\xFClein\n\nBernd
-    Waldenmaier\nAlexander Bartuli\n\nKai Stahl \n\nBernd Waldenmaier\nAlexander Bartuli\n\nKai
-    Stahl\n\nMatthias Sch\xFClein\nTim Herold\nBernd Waldenmaier\nAlexander Bartuli\nKai
-    Stahl \n\nProf. Uwe Kloos\n\n\n\n\n\n\n"
+  m_Text: "Matthias Sch\xFClein\nTim Herold\n\nBernd Waldenmaier\nMatthias Sch\xFClein\n\nAlexander
+    Bartuli\nBernd Waldenmaier\n\nKai Stahl \n\nAlexander Bartuli\nBernd Waldenmaier\n\nKai
+    Stahl\n\nAlexander Bartuli\nBernd Waldenmaier\nKai Stahl \nMatthias Sch\xFClein\nTim
+    Herold\n\nProf. Uwe Kloos\n\n\n\n\n\n\n"
 --- !u!222 &78087766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -330,8 +330,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Hochschule Reutlingen\n\nWintersemester\n2019/2020\n\nMediale Arbeit\nProf.
-    Uwe Kloos\n\nPok\xE9mon Chess\n\nMatthias Sch\xFClein (751450)\nTim Herold (761332)\nBernd
-    Waldenmaier (763233)\nAlexander Bartuli (763179)\nKai Stahl (763222)"
+    Uwe Kloos\n\nPok\xE9mon Chess\n\nAlexander Bartuli (763179)\nBernd Waldenmaier
+    (763233)\nKai Stahl (763222)\nMatthias Sch\xFClein (751450)\nTim Herold (761332)\n\n\n"
 --- !u!222 &271791200
 CanvasRenderer:
   m_ObjectHideFlags: 0
