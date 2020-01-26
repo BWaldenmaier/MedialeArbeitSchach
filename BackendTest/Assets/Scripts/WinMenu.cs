@@ -13,4 +13,8 @@ public class WinMenu : MonoBehaviour
         Debug.Log(winner + " hat das Spiel gewonnen!");   
         GetComponent<UnityEngine.UI.Text>().text = winner.ToUpper() + " WON THE GAME";
     }
+
+    public void backToMainMenu(){
+        SceneManager.LoadScene(0);
+    }   
 }
