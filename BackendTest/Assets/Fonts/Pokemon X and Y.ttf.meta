@@ -3,7 +3,7 @@ guid: 10f8bdcdb71cc3a46987594ed00756e5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 90
   forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
@@ -13,8 +13,8 @@ TrueTypeFontImporter:
   - Pokemon X and Y
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
+  fontRenderingMode: 1
+  ascentCalculationMode: 0
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
   userData: 

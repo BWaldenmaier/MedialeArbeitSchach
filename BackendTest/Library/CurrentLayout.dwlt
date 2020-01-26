@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 448}
   m_MaxSize: {x: 22012, y: 10024}
   vertical: 0
-  controlID: 52
+  controlID: 118
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,8 +136,8 @@ MonoBehaviour:
     y: 0
     width: 282
     height: 947
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 448}
   m_MaxSize: {x: 4004, y: 8048}
   vertical: 1
-  controlID: 14
+  controlID: 100
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,8 +214,8 @@ MonoBehaviour:
     y: 569
     width: 708
     height: 378
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -384,7 +384,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1aaaffff40aaffff4aaaffff54aaffffc6aaffffd0aaffff84aeffffaaaeffffb4aeffffbeaeffff30afffff3aafffff68b0ffff8eb0ffffbeb1ffffcab1ffff4eb2ffff6cb2ffff08b8ffff2eb8ffff38b8ffff42b8ffffb4b8ffffbeb8ffff92b9ffffb8b9ffffe8bafffff4baffff78bbffff96bbffff30fbffffbcfbffffba2d0000cc2d0000203a0000323a0000b03f0000c23f00007a4400008c440000
+      m_ExpandedIDs: 6ed5ffff94d5ffff9ed5ffffa8d5ffff1ad6ffff24d6ffffd2d6fffff8d6ffff28d8ffff34d8ffffb8d8ffffd6d8ffffb8e9ffffdee9ffffe8e9fffff2e9ffff64eaffff6eeaffff64f8ffff16f9ffff3cf9ffff70faffff7cfaffff00fbffff0afbffffbcfbffffb4340000c6340000cc3a0000de3a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 743.11017, y: -114.635574, z: -34.615486}
+    m_Target: {x: 321.29303, y: -150.8292, z: -23.15722}
     speed: 2
-    m_Value: {x: 743.11017, y: -114.635574, z: -34.615486}
+    m_Value: {x: 321.29303, y: -150.8292, z: -23.15722}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -474,9 +474,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1687.5991
+    m_Target: 546.9154
     speed: 2
-    m_Value: 1687.5991
+    m_Value: 546.9154
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -607,20 +607,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animationen
+    - Assets/Fonts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animationen
+  - Assets/Fonts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bwald\Desktop\Mediale Arbeit\MedialeArbeitSchach\BackendTest
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 142a0000
-    m_LastClickedID: 10772
-    m_ExpandedIDs: 00000000b4260000ce270000ba280000422b000000ca9a3b
+    m_SelectedIDs: 802a0000
+    m_LastClickedID: 10880
+    m_ExpandedIDs: 00000000b4260000ce270000b82800004a2b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -648,7 +648,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b4260000ce270000ba280000422b0000
+    m_ExpandedIDs: 00000000b4260000ce270000b82800004a2b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
