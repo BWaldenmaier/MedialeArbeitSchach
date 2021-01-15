@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/bwald/Desktop/neuerBuild/ChessTest.exe
+C:/Users/bwald/Desktop/Neuer Ordner/MedialeArbeitSchach/Build/ChessTest.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/SampleScene.unity
